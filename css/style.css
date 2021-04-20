@@ -1,0 +1,127 @@
+:root {
+    --violet: #4b0082;
+    --light-violet: slateblue;
+}
+
+:root {
+    --sizeM:14px;
+    --sizeL:20px;
+}
+
+:root {
+    --marginS: 0 10px;
+}
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 auto;
+    background-color: var(--violet);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+
+.main {
+    position: relative;
+}
+
+.content-item {
+    width: 300px;
+    height: 200px;
+    padding-top: 100px;
+    background-color: var(--light-violet);
+    margin: var(--marginS);
+    border: 1px solid black;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+    font-size: var(--sizeM);
+}
+
+.side-bar {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    background-color: var(--violet);
+    margin: 0 10px 30px 10px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.side-bar-content {
+    text-align: left;
+}
+
+/*Flex*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 580px) {
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media only screen and (min-device-width: 581px) and (max-device-width: 1023px) {
+    .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0 20px 20px 20px;
+    }
+  
+    .content {
+      width: 50%;
+    }
+  
+    aside {
+      width: 40%;
+    }
+  
+    .content-item,
+    .side-bar {
+      width: 100%;
+    }
+  
+    .content-item {
+      min-height: 250px;
+    }
+  
+    .side-bar {
+      height: 500px;
+    }
+  
+}
+  
+@media only screen and (min-width: 1024px) {
+    .content {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 0;
+    }
+  
+    .content-item {
+      min-height: 250px;
+    }
+  
+    .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .side-bar {
+      height: 250px;
+    }
+  
+    .content-item-2 {
+      margin-right: -10px;
+    }
+}
+  
